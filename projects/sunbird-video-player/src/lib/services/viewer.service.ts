@@ -3,7 +3,7 @@ import { EventEmitter, Injectable } from '@angular/core';
 import { PlayerConfig } from '../playerInterfaces';
 import { SunbirdVideoPlayerService } from '../sunbird-video-player.service';
 import { UtilService } from './util.service';
-import { errorCode , errorMessage } from '@project-sunbird/sunbird-player-sdk-v9';
+import { errorCode , errorMessage } from '@project-sunbird/sunbird-player-sdk-v8';
 
 @Injectable({
   providedIn: 'root'

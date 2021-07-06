@@ -2,7 +2,7 @@ import {
   ChangeDetectorRef, Component, EventEmitter, Input, OnInit, Output,
   HostListener, ElementRef, ViewChild, AfterViewInit, Renderer2, OnDestroy
 } from '@angular/core';
-import { ErrorService , errorCode , errorMessage } from '@project-sunbird/sunbird-player-sdk-v9';
+import { ErrorService , errorCode , errorMessage } from '@project-sunbird/sunbird-player-sdk-v8';
 
 import { PlayerConfig } from './playerInterfaces';
 import { ViewerService } from './services/viewer.service';

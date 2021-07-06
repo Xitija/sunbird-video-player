@@ -7,6 +7,6 @@
   "whitelistedNonPeerDependencies": [
     "tslib",
     "video.js",
-    "@project-sunbird/sunbird-player-sdk-v9"
+    "@project-sunbird/sunbird-player-sdk-v8"
   ]
 }
