@@ -40,7 +40,7 @@ export class SunbirdVideoPlayerService {
             host: context.host || '',
             endpoint: context.endpoint || '/data/v3/telemetry',
             tags: context.tags,
-            cdata: [{ id: this.contentSessionId, type: 'ContentSession' },
+            cdata: (context.cdata || []).concat([{ id: this.contentSessionId, type: 'ContentSession' },
             { id: this.playSessionId, type: 'PlaySession' },
             {id: "2.0" , type: "PlayerVersion"}]
           },
@@ -140,9 +140,9 @@ export class SunbirdVideoPlayerService {
         env: 'contentplayer',
         sid: this.context.sid,
         uid: this.context.uid,
-        cdata: [{ id: this.contentSessionId, type: 'ContentSession' },
+        cdata: (this.context.cdata || []).concat([{ id: this.contentSessionId, type: 'ContentSession' },
         { id: this.playSessionId, type: 'PlaySession' },
-        {id: "2.0" , type: "PlayerVersion"}],
+        {id: "2.0" , type: "PlayerVersion"}]),
         rollup: this.context.contextRollup || {}
       }
     });
