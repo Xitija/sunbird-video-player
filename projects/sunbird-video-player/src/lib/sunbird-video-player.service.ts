@@ -42,7 +42,7 @@ export class SunbirdVideoPlayerService {
             tags: context.tags,
             cdata: (context.cdata || []).concat([{ id: this.contentSessionId, type: 'ContentSession' },
             { id: this.playSessionId, type: 'PlaySession' },
-            {id: "2.0" , type: "PlayerVersion"}]
+            { id: "2.0", type: "PlayerVersion" }])
           },
           userOrgDetails: {}
         }
