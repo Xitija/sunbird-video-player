@@ -20,5 +20,5 @@
 </div>
 
 <div class="sunbird-video-player-container" *ngIf="showQumlPlayer" #qumlPlayer>
-      <quml-player [QumlPlayerConfig]="QumlPlayerConfig" (playerEvent)="qumlPlayerEvents($event)"></quml-player>
+      <quml-main-player [playerConfig]="QumlPlayerConfig" (playerEvent)="qumlPlayerEvents($event)"></quml-main-player>
 </div>
