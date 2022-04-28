@@ -108,7 +108,7 @@ export class SunbirdVideoPlayerComponent implements OnInit, AfterViewInit, OnDes
     }, 5000);
 
     /* tslint:disable:no-string-literal */
-    this.nextContent = this.playerConfig.config.nextContent;
+    this.nextContent = this.playerConfig.config?.nextContent;
     this.traceId = this.playerConfig.config['traceId'];
     this.sideMenuConfig = { ...this.sideMenuConfig, ...this.playerConfig.config.sideMenu };
     this.viewerService.initialize(this.playerConfig);
@@ -224,6 +224,8 @@ export class SunbirdVideoPlayerComponent implements OnInit, AfterViewInit, OnDes
     this.QumlPlayerConfig.metadata['showEndPage'] = 'No';
     this.currentInterceptionTime = time;
     this.currentInterceptionUIId = identifier;
+    this.QumlPlayerConfig.metadata.isAvailableLocally = this.playerConfig.metadata.isAvailableLocally;
+    this.QumlPlayerConfig.metadata.basePath = `${this.playerConfig.metadata.basePath}/interactions/`;
     this.showQumlPlayer = true;
   }
 

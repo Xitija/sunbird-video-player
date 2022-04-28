@@ -1,0 +1,122 @@
+{
+  "id": "sunbird.question.archive",
+  "ver": "1.2",
+  "ts": "2021-05-05T12:05:04.927+0000",
+  "params": {
+    "resmsgid": "f20dfbd3-f1bc-4a67-bbcf-49d655fb04a7"
+  },
+  "archive": {
+    "count": 1,
+    "ttl": 24,
+    "items": [
+      {
+        "lastStatusChangedOn": "2021-05-05T12:04:51.700+0000",
+        "author": "Content_creator_TN",
+        "solutions": [],
+        "body": "<div class='question-body'><div class='mcq-title'><p>Who is Krishna?</p></div><div data-choice-interaction='response1' class='mcq-vertical'></div></div>",
+        "name": "Krishna images",
+        "createdOn": "2021-05-05T12:00:28.287+0000",
+        "channel": "01269878797503692810",
+        "lastUpdatedOn": "2021-05-05T12:04:51.700+0000",
+        "showTimer": "No",
+        "editorState": {
+          "options": [
+            {
+              "answer": false,
+              "value": {
+                "body": "<figure class=\"image\"><img src=\"/assets/public/content/do_2132728090441973761133/artifact/do_2132728090441973761133_1620215948709_krishna.jpg\" alt=\"do_2132728090441973761133\" data-asset-variable=\"do_2132728090441973761133\"></figure>",
+                "value": 0
+              }
+            },
+            {
+              "answer": true,
+              "value": {
+                "body": "<figure class=\"image\"><img src=\"/assets/public/content/do_2132728091634565121134/artifact/do_2132728091634565121134_1620215965182_how-to-draw-bal-krishna-step-0.png\" alt=\"do_2132728091634565121134\" data-asset-variable=\"do_2132728091634565121134\"></figure>",
+                "value": 1
+              }
+            }
+          ],
+          "question": "<p>Who is Krishna?</p>"
+        },
+        "identifier": "do_213272809703727104122",
+        "interactions": {
+          "response1": {
+            "type": "choice",
+            "options": [
+              {
+                "label": "<figure class=\"image\"><img src=\"/assets/public/content/do_2132728090441973761133/artifact/do_2132728090441973761133_1620215948709_krishna.jpg\" alt=\"do_2132728090441973761133\" data-asset-variable=\"do_2132728090441973761133\"></figure>",
+                "value": 0
+              },
+              {
+                "label": "<figure class=\"image\"><img src=\"/assets/public/content/do_2132728091634565121134/artifact/do_2132728091634565121134_1620215965182_how-to-draw-bal-krishna-step-0.png\" alt=\"do_2132728091634565121134\" data-asset-variable=\"do_2132728091634565121134\"></figure>",
+                "value": 1
+              }
+            ]
+          }
+        },
+        "compatibilityLevel": 4,
+        "primaryCategory": "Multiple Choice Question",
+        "downloadUrl": "https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/question/do_213272809703727104122/krishna-images_1620216290804_do_213272809703727104122_1.ecar",
+        "interactionTypes": [
+          "choice"
+        ],
+        "framework": "tn_k-12_5",
+        "versionKey": "1620216028288",
+        "mimeType": "application/vnd.sunbird.question",
+        "code": "b90d7cf4-ec04-f8ee-861f-815df51b9284",
+        "license": "CC BY 4.0",
+        "version": 1,
+        "responseDeclaration": {
+          "response1": {
+            "maxScore": 1,
+            "cardinality": "single",
+            "type": "integer",
+            "correctResponse": {
+              "value": "1",
+              "outcomes": {
+                "SCORE": 1
+              }
+            }
+          }
+        },
+        "templateId": "mcq-vertical",
+        "prevState": "Draft",
+        "language": [
+          "English"
+        ],
+        "showFeedback": "No",
+        "objectType": "Question",
+        "status": "Live",
+        "media": [
+          {
+            "id": "do_2132728090441973761133",
+            "type": "image",
+            "src": "do_213272809703727104122/do_2132728090441973761133_1620215948709_krishna.jpg",
+            "baseUrl": ""
+          },
+          {
+            "id": "do_2132728091634565121134",
+            "type": "image",
+            "src": "do_213272809703727104122/do_2132728091634565121134_1620215965182_how-to-draw-bal-krishna-step-0.png",
+            "baseUrl": ""
+          }
+        ],
+        "answer": "1",
+        "contentEncoding": "gzip",
+        "se_FWIds": [
+          "tn_k-12_5"
+        ],
+        "allowAnonymousAccess": "Yes",
+        "contentDisposition": "inline",
+        "visibility": "Parent",
+        "qType": "MCQ",
+        "showSolutions": "No",
+        "variants": {
+          "full": "https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/question/do_213272809703727104122/krishna-images_1620216290804_do_213272809703727104122_1.ecar",
+          "online": "https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/question/do_213272809703727104122/krishna-images_1620216291646_do_213272809703727104122_1_ONLINE.ecar"
+        },
+        "pkgVersion": 2
+      }
+    ]
+  }
+}

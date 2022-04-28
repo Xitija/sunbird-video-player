@@ -1,0 +1,120 @@
+{
+    "id": "sunbird.content.archive",
+    "ver": "1.2",
+    "ts": "2022-02-05T12:03:25.238+0530",
+    "params": {
+        "resmsgid": "a139ba24-80d0-4982-997b-111128482dda"
+    },
+    "archive": {
+        "count": 1,
+        "ttl": 24,
+        "items": [
+            {
+                "lastStatusChangedOn": "2022-01-19T14:29:47.673+0530",
+                "publish_type": "public",
+                "mediaType": "content",
+                "name": "H5P Content2",
+                "discussionForum": {
+                    "enabled": "No"
+                },
+                "createdOn": "2022-01-13T13:43:12.339+0530",
+                "channel": "Sunbird",
+                "lastUpdatedOn": "2022-01-19T14:29:47.673+0530",
+                "size": 1055736.0,
+                "identifier": "do_11345176856416256012",
+                "ownershipType": [
+                    "createdBy"
+                ],
+                "compatibilityLevel": 1,
+                "audience": [
+                    "Student"
+                ],
+                "trackable": {
+                    "enabled": "No",
+                    "autoBatch": "No"
+                },
+                "os": [
+                    "All"
+                ],
+                "cloudStorageKey": "content/do_11345176856416256012/artifact/do_11345176856416256012_1642061599684_samplevideo_1280x720_1mb.mp4",
+                "primaryCategory": "learning-resource",
+                "downloadUrl": "do_11345176856416256012/do_11345176856416256012_1642061599684_samplevideo_1280x720_1mb.mp4",
+                "framework": "NCF",
+                "versionKey": "1642061601036",
+                "mimeType": "video/mp4",
+                "code": "h5pcontent2",
+                "license": "CC BY 4.0",
+                "version": 2,
+                "contentType": "Resource",
+                "prevState": "Draft",
+                "language": [
+                    "English"
+                ],
+                "lastPublishedOn": "2022-02-05T12:03:23.845+0530",
+                "objectType": "Content",
+                "status": "Live",
+                "createdBy": "874ed8a5-782e-4f6c-8f36-e0288455901e",
+                "publishchain": [
+                    {
+                        "state": "Live",
+                        "identifier": "do_11346746056914534411",
+                        "downloadUrl": "https://ttplsunbirddev.blob.core.windows.net/sunbird-content-dev/questionset/do_11346746056914534411/test-question-set_1644042760037_do_11346746056914534411_1.ecar",
+                        "mimeType": "application/vnd.sunbird.questionset",
+                        "objectType": "QuestionSet",
+                        "lastPublishedBy": "",
+                        "pkgVersion": 2
+                    },
+                    {
+                        "state": "Live",
+                        "identifier": "do_11346746113548288016",
+                        "downloadUrl": "https://ttplsunbirddev.blob.core.windows.net/sunbird-content-dev/questionset/do_11346746113548288016/test-question-set_1644042789008_do_11346746113548288016_1.ecar",
+                        "mimeType": "application/vnd.sunbird.questionset",
+                        "objectType": "QuestionSet",
+                        "lastPublishedBy": "",
+                        "pkgVersion": 2
+                    },
+                    {
+                        "state": "Processing",
+                        "identifier": "do_11345176856416256012",
+                        "mimeType": "video/mp4",
+                        "objectType": "Content",
+                        "lastPublishedBy": "",
+                        "pkgVersion": 2
+                    }
+                ],
+                "dialcodeRequired": "No",
+                "interceptionPoints": {
+                    "items": [
+                        {
+                            "identifier": "do_213272808198291456121",
+                            "interceptionPoint": 7,
+                            "type": "QuestionSet"
+                        },
+                        {
+                            "identifier": "do_21351976979069337613",
+                            "interceptionPoint": 14,
+                            "type": "QuestionSet"
+                        }
+                    ]
+                },
+                "idealScreenSize": "normal",
+                "contentEncoding": "identity",
+                "lastPublishedBy": "",
+                "osId": "org.ekstep.quiz.app",
+                "se_FWIds": [
+                    "NCF"
+                ],
+                "s3Key": "content/do_11345176856416256012/artifact/do_11345176856416256012_1642061599684_samplevideo_1280x720_1mb.mp4",
+                "contentDisposition": "inline",
+                "previewUrl": "do_11345176856416256012/do_11345176856416256012_1642061599684_samplevideo_1280x720_1mb.mp4",
+                "artifactUrl": "do_11345176856416256012/do_11345176856416256012_1642061599684_samplevideo_1280x720_1mb.mp4",
+                "visibility": "Default",
+                "credentials": {
+                    "enabled": "No"
+                },
+                "pkgVersion": 1,
+                "idealScreenDensity": "hdpi"
+            }
+        ]
+    }
+}

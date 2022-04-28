@@ -1,0 +1,462 @@
+{
+    "id": "sunbird.questionset.hierarchy",
+    "ver": "1.0",
+    "ts": "2022-04-19T11:33:49.797+0000",
+    "params": {
+        "resmsgid": "bb08898b-b2d9-4aee-810c-e1e704e5b48a"
+    },
+    "questionSet": {
+        "copyright": "G123",
+        "lastStatusChangedOn": "2022-04-19T11:30:02.988+0000",
+        "timeLimits": "{\"maxTime\":\"120\"}",
+        "author": "globe1@yopmail.com",
+        "children": [
+            {
+                "copyright": "G123",
+                "lastStatusChangedOn": "2022-04-19T11:33:48.313+0000",
+                "parent": "do_21351976979069337613",
+                "author": "globe1@yopmail.com",
+                "name": "Q1",
+                "createdOn": "2022-04-19T10:55:39.821+0000",
+                "channel": "01345815127107174426",
+                "lastUpdatedOn": "2022-04-19T11:33:48.313+0000",
+                "subject": [
+                    "Hindi"
+                ],
+                "showTimer": "No",
+                "se_topics": [
+                    "उत्साह; अट नहीं रही है"
+                ],
+                "identifier": "do_213519796140613632113",
+                "gradeLevel": [
+                    "Class 10"
+                ],
+                "compatibilityLevel": 4,
+                "audience": [
+                    "Student"
+                ],
+                "se_boards": [
+                    "CBSE"
+                ],
+                "primaryCategory": "Multiple Choice Question",
+                "se_mediums": [
+                    "Hindi"
+                ],
+                "downloadUrl": "https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/question/do_213519796140613632113/q1_1650368027976_do_213519796140613632113_1.ecar",
+                "se_subjects": [
+                    "Hindi"
+                ],
+                "medium": [
+                    "Hindi"
+                ],
+                "interactionTypes": [
+                    "choice"
+                ],
+                "framework": "ekstep_ncert_k-12",
+                "versionKey": "1650365739833",
+                "mimeType": "application/vnd.sunbird.question",
+                "code": "d39b9b27-a0bf-534c-bf84-d4fa3ad76579",
+                "license": "CC BY 4.0",
+                "version": 1,
+                "prevStatus": "Draft",
+                "templateId": "mcq-vertical",
+                "language": [
+                    "English"
+                ],
+                "board": "CBSE",
+                "showFeedback": "No",
+                "objectType": "Question",
+                "status": "Live",
+                "createdBy": "56c84dee-7149-47af-902d-0138e080cec0",
+                "contentEncoding": "gzip",
+                "depth": 1,
+                "topic": [
+                    "उत्साह; अट नहीं रही है"
+                ],
+                "se_gradeLevels": [
+                    "Class 10"
+                ],
+                "se_FWIds": [
+                    "ekstep_ncert_k-12"
+                ],
+                "allowAnonymousAccess": "Yes",
+                "contentDisposition": "inline",
+                "artifactUrl": "https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/question/do_213519796140613632113/do_213519796140613632113_1650368027102.zip",
+                "visibility": "Parent",
+                "qType": "MCQ",
+                "showSolutions": "No",
+                "variants": {
+                    "full": {
+                        "ecarUrl": "https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/question/do_213519796140613632113/q1_1650368027976_do_213519796140613632113_1.ecar",
+                        "size": "3196"
+                    },
+                    "online": {
+                        "ecarUrl": "https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/question/do_213519796140613632113/q1_1650368028051_do_213519796140613632113_1_ONLINE.ecar",
+                        "size": "1545"
+                    }
+                },
+                "index": 1,
+                "pkgVersion": 1
+            },
+            {
+                "copyright": "G123",
+                "lastStatusChangedOn": "2022-04-19T11:33:48.569+0000",
+                "parent": "do_21351976979069337613",
+                "author": "globe1@yopmail.com",
+                "name": "q2",
+                "createdOn": "2022-04-19T10:56:56.922+0000",
+                "channel": "01345815127107174426",
+                "lastUpdatedOn": "2022-04-19T11:33:48.569+0000",
+                "subject": [
+                    "Hindi"
+                ],
+                "showTimer": "No",
+                "se_topics": [
+                    "उत्साह; अट नहीं रही है"
+                ],
+                "identifier": "do_213519796772225024115",
+                "gradeLevel": [
+                    "Class 10"
+                ],
+                "compatibilityLevel": 4,
+                "audience": [
+                    "Student"
+                ],
+                "se_boards": [
+                    "CBSE"
+                ],
+                "primaryCategory": "Multiple Choice Question",
+                "se_mediums": [
+                    "Hindi"
+                ],
+                "downloadUrl": "https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/question/do_213519796772225024115/q2_1650368028442_do_213519796772225024115_1.ecar",
+                "se_subjects": [
+                    "Hindi"
+                ],
+                "medium": [
+                    "Hindi"
+                ],
+                "interactionTypes": [
+                    "choice"
+                ],
+                "framework": "ekstep_ncert_k-12",
+                "versionKey": "1650365816939",
+                "mimeType": "application/vnd.sunbird.question",
+                "code": "b41fc83c-dfda-3c09-8503-33b554a310b9",
+                "license": "CC BY 4.0",
+                "version": 1,
+                "prevStatus": "Draft",
+                "templateId": "mcq-vertical",
+                "language": [
+                    "English"
+                ],
+                "board": "CBSE",
+                "showFeedback": "No",
+                "objectType": "Question",
+                "status": "Live",
+                "createdBy": "56c84dee-7149-47af-902d-0138e080cec0",
+                "contentEncoding": "gzip",
+                "depth": 1,
+                "topic": [
+                    "उत्साह; अट नहीं रही है"
+                ],
+                "se_gradeLevels": [
+                    "Class 10"
+                ],
+                "se_FWIds": [
+                    "ekstep_ncert_k-12"
+                ],
+                "allowAnonymousAccess": "Yes",
+                "contentDisposition": "inline",
+                "artifactUrl": "https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/question/do_213519796772225024115/do_213519796772225024115_1650368028389.zip",
+                "visibility": "Parent",
+                "qType": "MCQ",
+                "showSolutions": "No",
+                "variants": {
+                    "full": {
+                        "ecarUrl": "https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/question/do_213519796772225024115/q2_1650368028442_do_213519796772225024115_1.ecar",
+                        "size": "3138"
+                    },
+                    "online": {
+                        "ecarUrl": "https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/question/do_213519796772225024115/q2_1650368028496_do_213519796772225024115_1_ONLINE.ecar",
+                        "size": "1515"
+                    }
+                },
+                "index": 2,
+                "pkgVersion": 1
+            },
+            {
+                "copyright": "G123",
+                "lastStatusChangedOn": "2022-04-19T11:33:48.769+0000",
+                "parent": "do_21351976979069337613",
+                "author": "globe1@yopmail.com",
+                "name": "Q3",
+                "createdOn": "2022-04-19T11:08:35.560+0000",
+                "channel": "01345815127107174426",
+                "lastUpdatedOn": "2022-04-19T11:33:48.769+0000",
+                "subject": [
+                    "Hindi"
+                ],
+                "showTimer": "No",
+                "se_topics": [
+                    "उत्साह; अट नहीं रही है"
+                ],
+                "identifier": "do_213519802495467520117",
+                "gradeLevel": [
+                    "Class 10"
+                ],
+                "compatibilityLevel": 4,
+                "audience": [
+                    "Student"
+                ],
+                "se_boards": [
+                    "CBSE"
+                ],
+                "primaryCategory": "Multiple Choice Question",
+                "se_mediums": [
+                    "Hindi"
+                ],
+                "downloadUrl": "https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/question/do_213519802495467520117/q3_1650368028657_do_213519802495467520117_1.ecar",
+                "se_subjects": [
+                    "Hindi"
+                ],
+                "medium": [
+                    "Hindi"
+                ],
+                "interactionTypes": [
+                    "choice"
+                ],
+                "framework": "ekstep_ncert_k-12",
+                "versionKey": "1650366515574",
+                "mimeType": "application/vnd.sunbird.question",
+                "code": "b503fd83-c2a1-5cb7-0481-ef90ce945756",
+                "license": "CC BY 4.0",
+                "version": 1,
+                "prevStatus": "Draft",
+                "templateId": "mcq-vertical",
+                "language": [
+                    "English"
+                ],
+                "board": "CBSE",
+                "showFeedback": "No",
+                "objectType": "Question",
+                "status": "Live",
+                "createdBy": "56c84dee-7149-47af-902d-0138e080cec0",
+                "contentEncoding": "gzip",
+                "depth": 1,
+                "topic": [
+                    "उत्साह; अट नहीं रही है"
+                ],
+                "se_gradeLevels": [
+                    "Class 10"
+                ],
+                "se_FWIds": [
+                    "ekstep_ncert_k-12"
+                ],
+                "allowAnonymousAccess": "Yes",
+                "contentDisposition": "inline",
+                "artifactUrl": "https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/question/do_213519802495467520117/do_213519802495467520117_1650368028614.zip",
+                "visibility": "Parent",
+                "qType": "MCQ",
+                "showSolutions": "No",
+                "variants": {
+                    "full": {
+                        "ecarUrl": "https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/question/do_213519802495467520117/q3_1650368028657_do_213519802495467520117_1.ecar",
+                        "size": "3067"
+                    },
+                    "online": {
+                        "ecarUrl": "https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/question/do_213519802495467520117/q3_1650368028711_do_213519802495467520117_1_ONLINE.ecar",
+                        "size": "1481"
+                    }
+                },
+                "index": 3,
+                "pkgVersion": 1
+            },
+            {
+                "copyright": "G123",
+                "lastStatusChangedOn": "2022-04-19T11:33:48.962+0000",
+                "parent": "do_21351976979069337613",
+                "author": "globe1@yopmail.com",
+                "name": "q3",
+                "createdOn": "2022-04-19T11:24:07.587+0000",
+                "channel": "01345815127107174426",
+                "lastUpdatedOn": "2022-04-19T11:33:48.962+0000",
+                "subject": [
+                    "Hindi"
+                ],
+                "showTimer": "No",
+                "se_topics": [
+                    "उत्साह; अट नहीं रही है"
+                ],
+                "identifier": "do_213519810130632704119",
+                "gradeLevel": [
+                    "Class 10"
+                ],
+                "compatibilityLevel": 4,
+                "audience": [
+                    "Student"
+                ],
+                "se_boards": [
+                    "CBSE"
+                ],
+                "primaryCategory": "Multiple Choice Question",
+                "se_mediums": [
+                    "Hindi"
+                ],
+                "downloadUrl": "https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/question/do_213519810130632704119/q3_1650368028865_do_213519810130632704119_1.ecar",
+                "se_subjects": [
+                    "Hindi"
+                ],
+                "medium": [
+                    "Hindi"
+                ],
+                "interactionTypes": [
+                    "choice"
+                ],
+                "framework": "ekstep_ncert_k-12",
+                "versionKey": "1650367447598",
+                "mimeType": "application/vnd.sunbird.question",
+                "code": "1d672d18-22ff-26e3-4edc-6b3234ea4e27",
+                "license": "CC BY 4.0",
+                "version": 1,
+                "prevStatus": "Draft",
+                "templateId": "mcq-vertical",
+                "language": [
+                    "English"
+                ],
+                "board": "CBSE",
+                "showFeedback": "No",
+                "objectType": "Question",
+                "status": "Live",
+                "createdBy": "56c84dee-7149-47af-902d-0138e080cec0",
+                "contentEncoding": "gzip",
+                "depth": 1,
+                "topic": [
+                    "उत्साह; अट नहीं रही है"
+                ],
+                "se_gradeLevels": [
+                    "Class 10"
+                ],
+                "se_FWIds": [
+                    "ekstep_ncert_k-12"
+                ],
+                "allowAnonymousAccess": "Yes",
+                "contentDisposition": "inline",
+                "artifactUrl": "https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/question/do_213519810130632704119/do_213519810130632704119_1650368028826.zip",
+                "visibility": "Parent",
+                "qType": "MCQ",
+                "showSolutions": "No",
+                "variants": {
+                    "full": {
+                        "ecarUrl": "https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/question/do_213519810130632704119/q3_1650368028865_do_213519810130632704119_1.ecar",
+                        "size": "3051"
+                    },
+                    "online": {
+                        "ecarUrl": "https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/question/do_213519810130632704119/q3_1650368028910_do_213519810130632704119_1_ONLINE.ecar",
+                        "size": "1470"
+                    }
+                },
+                "index": 4,
+                "pkgVersion": 1
+            }
+        ],
+        "name": "Question set",
+        "navigationMode": "non-linear",
+        "createdOn": "2022-04-19T10:02:03.292+0000",
+        "createdFor": [
+            "01345815127107174426"
+        ],
+        "channel": "01345815127107174426",
+        "generateDIALCodes": "No",
+        "maxScore": 4,
+        "lastUpdatedOn": "2022-04-19T11:31:22.029+0000",
+        "subject": [
+            "Hindi"
+        ],
+        "showTimer": "No",
+        "publishError": null,
+        "se_topics": [
+            "उत्साह; अट नहीं रही है"
+        ],
+        "identifier": "do_21351976979069337613",
+        "description": "Question set",
+        "gradeLevel": [
+            "Class 10"
+        ],
+        "containsUserData": "No",
+        "allowSkip": "Yes",
+        "compatibilityLevel": 5,
+        "audience": [
+            "Student"
+        ],
+        "se_boards": [
+            "CBSE"
+        ],
+        "primaryCategory": "Practice Question Set",
+        "setType": "materialised",
+        "appIcon": "https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/questionset/do_21351976979069337613/artifact/do_2133016737715240961616_1623739474410_pexels-photo-594364.thumb.jpeg",
+        "se_mediums": [
+            "Hindi"
+        ],
+        "downloadUrl": null,
+        "se_subjects": [
+            "Hindi"
+        ],
+        "lockKey": "c12c30e2-8a16-454d-9f10-9b5b779ad1e0",
+        "medium": [
+            "Hindi"
+        ],
+        "attributions": [],
+        "framework": "ekstep_ncert_k-12",
+        "posterImage": "https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/content/do_2133016737715240961616/artifact/do_2133016737715240961616_1623739474410_pexels-photo-594364.jpeg",
+        "versionKey": "1650367882029",
+        "mimeType": "application/vnd.sunbird.questionset",
+        "code": "a1feae56-ab2e-5971-9ca7-ace6112f0ef6",
+        "license": "CC BY 4.0",
+        "maxQuestions": 4,
+        "version": 1,
+        "prevStatus": "Draft",
+        "showHints": "No",
+        "summaryType": "Complete",
+        "language": [
+            "English"
+        ],
+        "board": "CBSE",
+        "showFeedback": "No",
+        "lastPublishedOn": "2022-04-19T11:33:49.049+0000",
+        "objectType": "QuestionSet",
+        "status": "Live",
+        "targetFWIds": [
+            "ekstep_ncert_k-12"
+        ],
+        "createdBy": "56c84dee-7149-47af-902d-0138e080cec0",
+        "requiresSubmit": "No",
+        "shuffle": true,
+        "contentEncoding": "gzip",
+        "depth": 0,
+        "consumerId": "cb069f8d-e4e1-46c5-831f-d4a83b323ada",
+        "topic": [
+            "उत्साह; अट नहीं रही है"
+        ],
+        "se_gradeLevels": [
+            "Class 10"
+        ],
+        "se_FWIds": [
+            "ekstep_ncert_k-12"
+        ],
+        "allowAnonymousAccess": "Yes",
+        "contentDisposition": "inline",
+        "additionalCategories": [],
+        "allowBranching": "No",
+        "childNodes": [
+            "do_213519796140613632113",
+            "do_213519796772225024115",
+            "do_213519802495467520117",
+            "do_213519810130632704119"
+        ],
+        "visibility": "Default",
+        "showSolutions": "No",
+        "variants": null,
+        "pkgVersion": 1
+    }
+}

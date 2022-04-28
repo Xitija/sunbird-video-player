@@ -1,4 +1,4 @@
-export const playerConfig = {
+export const samplePlayerConfig = {
   context: {
     mode: 'play',
     authToken: '',

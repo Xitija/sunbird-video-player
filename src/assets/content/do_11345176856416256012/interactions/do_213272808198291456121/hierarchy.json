@@ -1,0 +1,158 @@
+{
+    "id": "sunbird.questionset.hierarchy",
+    "ver": "1.0",
+    "ts": "2021-05-05T12:05:05.303+0000",
+    "params": {
+        "resmsgid": "b73c3c55-7977-45be-8acc-7f704c7bd233"
+    },
+    "questionSet": {
+        "lastStatusChangedOn": "2021-05-05T12:04:52.425+0000",
+        "children": [
+            {
+                "lastStatusChangedOn": "2021-05-05T12:05:05.065+0000",
+                "parent": "do_213272808198291456121",
+                "author": "Content_creator_TN",
+                "name": "Krishna images",
+                "createdOn": "2021-05-05T12:00:28.287+0000",
+                "channel": "01269878797503692810",
+                "lastUpdatedOn": "2021-05-05T12:05:05.065+0000",
+                "showTimer": "No",
+                "identifier": "do_213272809703727104122",
+                "compatibilityLevel": 4,
+                "primaryCategory": "Multiple Choice Question",
+                "downloadUrl": "https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/question/do_213272809703727104122/krishna-images_1620216304790_do_213272809703727104122_2.ecar",
+                "interactionTypes": [
+                    "choice"
+                ],
+                "framework": "tn_k-12_5",
+                "versionKey": "1620216028288",
+                "mimeType": "application/vnd.sunbird.question",
+                "code": "b90d7cf4-ec04-f8ee-861f-815df51b9284",
+                "license": "CC BY 4.0",
+                "version": 1,
+                "templateId": "mcq-vertical",
+                "prevState": "Draft",
+                "language": [
+                    "English"
+                ],
+                "showFeedback": "No",
+                "objectType": "Question",
+                "status": "Live",
+                "contentEncoding": "gzip",
+                "depth": 1,
+                "se_FWIds": [
+                    "tn_k-12_5"
+                ],
+                "allowAnonymousAccess": "Yes",
+                "contentDisposition": "inline",
+                "visibility": "Parent",
+                "qType": "MCQ",
+                "showSolutions": "No",
+                "variants": "{\"full\":\"https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/question/do_213272809703727104122/krishna-images_1620216304790_do_213272809703727104122_2.ecar\",\"online\":\"https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/question/do_213272809703727104122/krishna-images_1620216305023_do_213272809703727104122_2_ONLINE.ecar\"}",
+                "index": 1,
+                "pkgVersion": 2
+            },
+            {
+                "lastStatusChangedOn": "2021-05-05T12:05:05.251+0000",
+                "parent": "do_213272808198291456121",
+                "author": "Content_creator_TN",
+                "name": "Hanuman",
+                "createdOn": "2021-05-05T12:03:44.534+0000",
+                "channel": "01269878797503692810",
+                "lastUpdatedOn": "2021-05-05T12:05:05.251+0000",
+                "showTimer": "No",
+                "identifier": "do_213272811311382528124",
+                "compatibilityLevel": 4,
+                "primaryCategory": "Multiple Choice Question",
+                "downloadUrl": "https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/question/do_213272811311382528124/hanuman_1620216305097_do_213272811311382528124_2.ecar",
+                "interactionTypes": [
+                    "choice"
+                ],
+                "framework": "tn_k-12_5",
+                "versionKey": "1620216224535",
+                "mimeType": "application/vnd.sunbird.question",
+                "code": "c56475c5-5398-cccd-bda0-4f2059996839",
+                "license": "CC BY 4.0",
+                "version": 1,
+                "templateId": "mcq-vertical",
+                "prevState": "Draft",
+                "language": [
+                    "English"
+                ],
+                "showFeedback": "No",
+                "objectType": "Question",
+                "status": "Live",
+                "contentEncoding": "gzip",
+                "depth": 1,
+                "se_FWIds": [
+                    "tn_k-12_5"
+                ],
+                "allowAnonymousAccess": "Yes",
+                "contentDisposition": "inline",
+                "visibility": "Parent",
+                "qType": "MCQ",
+                "showSolutions": "No",
+                "variants": "{\"full\":\"https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/question/do_213272811311382528124/hanuman_1620216305097_do_213272811311382528124_2.ecar\",\"online\":\"https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/question/do_213272811311382528124/hanuman_1620216305212_do_213272811311382528124_2_ONLINE.ecar\"}",
+                "index": 2,
+                "pkgVersion": 2
+            }
+        ],
+        "name": "Untitled QuestionSet",
+        "navigationMode": "non-linear",
+        "createdOn": "2021-05-05T11:57:24.519+0000",
+        "createdFor": [
+            "01269878797503692810"
+        ],
+        "channel": "01269878797503692810",
+        "pdfUrl": "https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/questionset/do_213272808198291456121/do_213272808198291456121_pdf_1620216292062.pdf",
+        "lastUpdatedOn": "2021-05-05T12:04:52.425+0000",
+        "showTimer": "No",
+        "publishError": null,
+        "identifier": "do_213272808198291456121",
+        "containsUserData": "No",
+        "allowSkip": "Yes",
+        "compatibilityLevel": 5,
+        "primaryCategory": "Practice Question Set",
+        "setType": "materialised",
+        "downloadUrl": null,
+        "framework": "tn_k-12_5",
+        "versionKey": "1620216251547",
+        "mimeType": "application/vnd.sunbird.questionset",
+        "code": "8494723d-a898-4335-4cdf-49ff488a23bb",
+        "license": "CC BY 4.0",
+        "version": 1,
+        "showHints": "No",
+        "prevState": "Draft",
+        "language": [
+            "English"
+        ],
+        "showFeedback": "No",
+        "lastPublishedOn": "2021-05-05T12:05:05.281+0000",
+        "objectType": "QuestionSet",
+        "status": "Live",
+        "createdBy": "4cd4c690-eab6-4938-855a-447c7b1b8ea9",
+        "requiresSubmit": "No",
+        "shuffle": true,
+        "contentEncoding": "gzip",
+        "depth": 0,
+        "consumerId": "b350f619-5eb4-45d5-87ce-fb143ae9f684",
+        "se_FWIds": [
+            "tn_k-12_5"
+        ],
+        "allowAnonymousAccess": "Yes",
+        "contentDisposition": "inline",
+        "previewUrl": "https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/questionset/do_213272808198291456121/do_213272808198291456121_html_1620216292062.html",
+        "childNodes": [
+            "do_213272809703727104122",
+            "do_213272811311382528124"
+        ],
+        "instructions": {
+            "default": "This is sample root level instructions"
+        },
+        "maxScore": 4,
+        "visibility": "Default",
+        "showSolutions": "No",
+        "variants": null,
+        "pkgVersion": 2
+    }
+}

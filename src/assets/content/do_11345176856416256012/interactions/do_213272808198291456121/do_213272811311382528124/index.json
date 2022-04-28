@@ -1,0 +1,122 @@
+{
+    "id": "sunbird.question.archive",
+    "ver": "1.2",
+    "ts": "2021-05-05T12:05:05.177+0000",
+    "params": {
+        "resmsgid": "c9d3962b-2660-46fb-b0c4-f47b6a9028e4"
+    },
+    "archive": {
+        "count": 1,
+        "ttl": 24,
+        "items": [
+            {
+                "lastStatusChangedOn": "2021-05-05T12:04:51.899+0000",
+                "author": "Content_creator_TN",
+                "solutions": [],
+                "body": "<div class='question-body'><div class='mcq-title'><p>Lord Hanuman</p></div><div data-choice-interaction='response1' class='mcq-vertical'></div></div>",
+                "name": "Hanuman",
+                "createdOn": "2021-05-05T12:03:44.534+0000",
+                "channel": "01269878797503692810",
+                "lastUpdatedOn": "2021-05-05T12:04:51.899+0000",
+                "showTimer": "No",
+                "editorState": {
+                    "options": [
+                        {
+                            "answer": true,
+                            "value": {
+                                "body": "<figure class=\"image\"><img src=\"/assets/public/content/do_2132728107858165761141/artifact/do_2132728107858165761141_1620216163962_0d5a61bd1c4ef010df0cadc1d9e554b6.jpg\" alt=\"do_2132728107858165761141\" data-asset-variable=\"do_2132728107858165761141\"></figure>",
+                                "value": 0
+                            }
+                        },
+                        {
+                            "answer": false,
+                            "value": {
+                                "body": "<figure class=\"image\"><img src=\"/assets/public/content/do_2132728111967600641142/artifact/do_2132728111967600641142_1620216211358_images.jpg\" alt=\"do_2132728111967600641142\" data-asset-variable=\"do_2132728111967600641142\"></figure>",
+                                "value": 1
+                            }
+                        }
+                    ],
+                    "question": "<p>Lord Hanuman</p>"
+                },
+                "identifier": "do_213272811311382528124",
+                "interactions": {
+                    "response1": {
+                        "type": "choice",
+                        "options": [
+                            {
+                                "label": "<figure class=\"image\"><img src=\"/assets/public/content/do_2132728107858165761141/artifact/do_2132728107858165761141_1620216163962_0d5a61bd1c4ef010df0cadc1d9e554b6.jpg\" alt=\"do_2132728107858165761141\" data-asset-variable=\"do_2132728107858165761141\"></figure>",
+                                "value": 0
+                            },
+                            {
+                                "label": "<figure class=\"image\"><img src=\"/assets/public/content/do_2132728111967600641142/artifact/do_2132728111967600641142_1620216211358_images.jpg\" alt=\"do_2132728111967600641142\" data-asset-variable=\"do_2132728111967600641142\"></figure>",
+                                "value": 1
+                            }
+                        ]
+                    }
+                },
+                "compatibilityLevel": 4,
+                "primaryCategory": "Multiple Choice Question",
+                "downloadUrl": "https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/question/do_213272811311382528124/hanuman_1620216291738_do_213272811311382528124_1.ecar",
+                "interactionTypes": [
+                    "choice"
+                ],
+                "framework": "tn_k-12_5",
+                "versionKey": "1620216224535",
+                "mimeType": "application/vnd.sunbird.question",
+                "code": "c56475c5-5398-cccd-bda0-4f2059996839",
+                "license": "CC BY 4.0",
+                "version": 1,
+                "responseDeclaration": {
+                    "response1": {
+                        "maxScore": 1,
+                        "cardinality": "single",
+                        "type": "integer",
+                        "correctResponse": {
+                            "value": "0",
+                            "outcomes": {
+                                "SCORE": 1
+                            }
+                        }
+                    }
+                },
+                "templateId": "mcq-vertical",
+                "prevState": "Draft",
+                "language": [
+                    "English"
+                ],
+                "showFeedback": "No",
+                "objectType": "Question",
+                "status": "Live",
+                "media": [
+                    {
+                        "id": "do_2132728107858165761141",
+                        "type": "image",
+                        "src": "/do_213272811311382528124/do_2132728107858165761141_1620216163962_0d5a61bd1c4ef010df0cadc1d9e554b6.jpg",
+                        "baseUrl": ""
+                    },
+                    {
+                        "id": "do_2132728111967600641142",
+                        "type": "image",
+                        "src": "/do_213272811311382528124/do_2132728111967600641142_1620216211358_images.jpg",
+                        "baseUrl": ""
+                    }
+                ],
+                "answer": "0",
+                "contentEncoding": "gzip",
+                "se_FWIds": [
+                    "tn_k-12_5"
+                ],
+                "allowAnonymousAccess": "Yes",
+                "contentDisposition": "inline",
+                "visibility": "Parent",
+                "qType": "MCQ",
+                "showSolutions": "No",
+                "variants": {
+                    "full": "https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/question/do_213272811311382528124/hanuman_1620216291738_do_213272811311382528124_1.ecar",
+                    "online": "https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/question/do_213272811311382528124/hanuman_1620216291862_do_213272811311382528124_1_ONLINE.ecar"
+                },
+                "pkgVersion": 2
+            }
+        ]
+    }
+}
