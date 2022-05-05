@@ -24,6 +24,16 @@ jobs:
       - run: 
           name: Sonar scanner
           command: cd ~/sunbird-video-player && sonar-scanner 
+      - run:
+          name: Publish to NPM
+          command: |
+            if [ -z $CIRCLE_PR_NUMBER ]; then
+              npm run build-lib && npm pack ./dist/sunbird-video-player
+              echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/.npmrc
+              npm publish project-sunbird-sunbird-video-player-v9-*
+            else
+              npm run build-lib && npm pack ./dist/sunbird-video-player
+            fi
 workflows:
   version: 2.1
   build_and_test:
