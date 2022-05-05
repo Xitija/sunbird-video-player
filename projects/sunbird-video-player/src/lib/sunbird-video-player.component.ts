@@ -15,6 +15,7 @@ import { SunbirdVideoPlayerService } from './sunbird-video-player.service';
 export class SunbirdVideoPlayerComponent implements OnInit, AfterViewInit, OnDestroy {
 
   @Input() playerConfig: PlayerConfig;
+  @Input() action: string;
   @Output() playerEvent: EventEmitter<object>;
   @Output() telemetryEvent: EventEmitter<any> = new EventEmitter<any>();
   @ViewChild('videoPlayer', { static: true }) videoPlayerRef: ElementRef;
@@ -225,7 +226,7 @@ export class SunbirdVideoPlayerComponent implements OnInit, AfterViewInit, OnDes
     this.currentInterceptionTime = time;
     this.currentInterceptionUIId = identifier;
     this.QumlPlayerConfig.metadata.isAvailableLocally = this.playerConfig.metadata.isAvailableLocally;
-    this.QumlPlayerConfig.metadata.basePath = `${this.playerConfig.metadata.basePath}/interactions/`;
+    this.QumlPlayerConfig.metadata.basePath = `${this.playerConfig.metadata.basePath}/`;// `${this.playerConfig.metadata.basePath}/interactions/`;
     this.showQumlPlayer = true;
   }
 

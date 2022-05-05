@@ -15,7 +15,8 @@ export class QuestionCursorImplementationService implements QuestionCursor {
     constructor(private http: HttpClient, private apiService: ApiService) { }
 
     getLocalQuestionSet(identifier) {
-        this.localBaseUrl = `assets/content/${this.apiService.videoContentId}/interactions/${identifier}/`;
+        //this.localBaseUrl = `assets/content/${this.apiService.videoContentId}/interactions/${identifier}/`;
+        this.localBaseUrl = `assets/content/${this.apiService.videoContentId}/${identifier}/`;
         return this.http.get(this.localBaseUrl + 'hierarchy.json').pipe(map((data) => {
             return data;
         }));
@@ -23,11 +24,12 @@ export class QuestionCursorImplementationService implements QuestionCursor {
 
     getQuestionSet(identifier) {
         if (this.apiService.isOffline && this.apiService.videoContentId) {
-            this.localBaseUrl = `assets/content/${this.apiService.videoContentId}/interactions/${identifier}/`;
+            //this.localBaseUrl = `assets/content/${this.apiService.videoContentId}/interactions/${identifier}/`;
             // return this.http.get(this.localBaseUrl + 'hierarchy.json').pipe(map((data) => {
             //     this.questionSet = data;
             //     return data;
             // }));
+            this.localBaseUrl = `assets/content/${this.apiService.videoContentId}/${identifier}/`;
 
             return this.getLocalQuestionSet(identifier).pipe(map((questionSet) => {
                 this.questionSet = questionSet;

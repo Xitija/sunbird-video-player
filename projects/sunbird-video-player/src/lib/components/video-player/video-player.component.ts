@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnDestroy, Output,
+import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnDestroy, Output, OnChanges, SimpleChanges,
    Renderer2, ViewChild, ViewEncapsulation } from '@angular/core';
 import { QuestionCursor } from '@project-sunbird/sunbird-quml-player-v9';
 import * as _ from 'lodash-es';
@@ -13,8 +13,9 @@ import { ViewerService } from '../../services/viewer.service';
   styleUrls: ['./video-player.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class VideoPlayerComponent implements AfterViewInit, OnDestroy {
+export class VideoPlayerComponent implements AfterViewInit, OnDestroy, OnChanges {
   @Input() config: any;
+  @Input() action: string;
   @Output() questionSetData = new EventEmitter();
   @Output() playerInstance = new EventEmitter();
   showBackwardButton = false;
@@ -138,6 +139,17 @@ export class VideoPlayerComponent implements AfterViewInit, OnDestroy {
       if (event === 'OPEN_MENU') { this.pause(); }
       if (event === 'CLOSE_MENU') { this.play(); }
     });
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if(changes.action && this.player){
+      if(changes.action.currentValue !== changes.action.previousValue){
+        if(changes.action.currentValue == 'play')
+          this.play();
+        else if(changes.action.currentValue == 'pause')
+          this.pause();
+      }
+    }
   }
 
   onLoadMetadata(e) {

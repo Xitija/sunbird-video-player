@@ -2,7 +2,7 @@
       <sb-player-side-menu-icon class="sb-player-side-menu-icon notVisible" tabindex="0" (sidebarMenuEvent)="sideBarEvents($event)"
 
             *ngIf="viewState ==='player'" [ngClass]="{'isVisible': showControls}"></sb-player-side-menu-icon>
-      <video-player *ngIf="viewState === 'player'" (questionSetData)="questionSetData($event)" (playerInstance)="playerInstance($event)" [config]="playerConfig.config">
+      <video-player *ngIf="viewState === 'player'" (questionSetData)="questionSetData($event)" (playerInstance)="playerInstance($event)" [config]="playerConfig.config" [action]="action">
       </video-player>
       <sb-player-sidebar *ngIf="viewState ==='player'"
        [title]="viewerService.contentName"
