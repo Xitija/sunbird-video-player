@@ -5,7 +5,7 @@
     "@angular/common": ">= 8.0.0",
     "@angular/core": ">= 8.0.0",
     "@types/video.js": "7.5.5",
-    "video.js": "7.4.1",
+    "video.js": "7.18.1",
     "@project-sunbird/client-services": "^3.4.11",
     "@project-sunbird/sb-styles": "0.0.7",
     "@project-sunbird/sunbird-quml-player-v9": "4.5.0",

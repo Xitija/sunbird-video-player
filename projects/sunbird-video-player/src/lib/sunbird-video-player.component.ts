@@ -33,6 +33,7 @@ export class SunbirdVideoPlayerComponent implements OnInit, AfterViewInit, OnDes
   private unlistenTouchStart: () => void;
   private unlistenMouseMove: () => void;
   isPaused = false;
+  isFullScreen = false;
   showQumlPlayer = false;
   QumlPlayerConfig: any = {};
   videoInstance: any;
@@ -215,6 +216,10 @@ export class SunbirdVideoPlayerComponent implements OnInit, AfterViewInit, OnDes
       this.showQumlPlayer = false;
       this.videoInstance.play();
       this.videoInstance.controls(true);
+      if (!document.fullscreenElement && this.isFullScreen) {
+         document.getElementsByClassName('video-js')[0].requestFullscreen()
+         .catch((err) => console.error(err))
+       }
     }
   }
 
@@ -227,6 +232,14 @@ export class SunbirdVideoPlayerComponent implements OnInit, AfterViewInit, OnDes
     this.currentInterceptionUIId = identifier;
     this.QumlPlayerConfig.metadata.isAvailableLocally = this.playerConfig.metadata.isAvailableLocally;
     this.QumlPlayerConfig.metadata.basePath = `${this.playerConfig.metadata.basePath}/`;// `${this.playerConfig.metadata.basePath}/interactions/`;
+    if (document.fullscreenElement) {
+      this.isFullScreen = true;
+      document.exitFullscreen()
+      .catch((err) => console.error(err))
+    }
+    else {
+      this.isFullScreen = false;
+    }
     this.showQumlPlayer = true;
   }
 
