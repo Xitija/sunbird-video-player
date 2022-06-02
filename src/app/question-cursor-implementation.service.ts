@@ -3,7 +3,7 @@ import { Injectable } from "@angular/core";
 import { QuestionCursor } from '@project-sunbird/sunbird-quml-player-v9';
 import { forkJoin, Observable, of, throwError as observableThrowError } from 'rxjs';
 import { map, mergeMap } from 'rxjs/operators';
-import { ApiService } from './api.service';
+import { ApiService } from './services/api.service';
 
 @Injectable({
     providedIn: 'root'

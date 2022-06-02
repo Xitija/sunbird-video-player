@@ -1,12 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
-import { PlayerConfig } from '../playerInterfaces';
+import { PlayerConfig, Transcripts } from '../playerInterfaces';
 import { SunbirdVideoPlayerService } from '../sunbird-video-player.service';
 import { UtilService } from './util.service';
 import { errorCode , errorMessage } from '@project-sunbird/sunbird-player-sdk-v9';
 import { QuestionCursor } from '@project-sunbird/sunbird-quml-player-v9';
 import { of } from 'rxjs';
 import { map } from 'rxjs/operators';
+import * as _ from 'lodash-es';
 
 @Injectable({
   providedIn: 'root'
@@ -41,7 +42,7 @@ export class ViewerService {
   public playerInstance: any;
   public contentMap = {};
   public isEndEventRaised = false;
-
+  public transcripts: Transcripts;
   constructor(private videoPlayerService: SunbirdVideoPlayerService,
               private utilService: UtilService,
               private http: HttpClient,
@@ -70,8 +71,10 @@ export class ViewerService {
       playBackSpeeds: [],
       totalDuration: 0,
       muted: undefined,
-      currentDuration: undefined
+      currentDuration: undefined,
+      transcripts: _.get(config, 'transcripts') || []
     };
+    this.transcripts = metadata.transcripts ? this.handleTranscriptsData(metadata.transcripts) : [];
     this.showDownloadPopup = false;
     this.endPageSeen = false;
     if (this.isAvailableLocally) {
@@ -80,7 +83,25 @@ export class ViewerService {
       this.mimeType = metadata.mimeType;
     }
   }
-
+  handleTranscriptsData(transcripts) {
+    if (!_.isArray(transcripts)) {
+      this.raiseExceptionLog('INVALID_TRANSCRIPT_DATATYPE', 'TRANSCRIPT', new Error('Transcript data should be array'), this.traceId);
+      return [];
+    } else {
+           _.forEach(transcripts, (value) => {
+        if (!(_.some(transcripts, { language: value.language, artifactUrl: value.artifactUrl ,
+          languageCode: value.languageCode, identifier: value.identifier}))) {
+          this.raiseExceptionLog('TRANSCRIPT_DATA_MISSING', 'TRANSCRIPT',
+           new Error('Transcript object dose not have required fields'), this.traceId);
+          return transcripts = [];
+        } else if (!_.isEmpty(this.metaData.transcripts) &&
+          ( _.last(this.metaData.transcripts) !== 'off' &&  _.last(this.metaData.transcripts) === value.languageCode)) {
+          value.default = true;
+        }
+      });
+    }
+    return transcripts;
+  }
   async getPlayerOptions() {
     if (!this.streamingUrl) {
       return [{ src: this.artifactUrl, type: this.artifactMimeType }];
@@ -201,7 +222,7 @@ export class ViewerService {
   }
 
 
-  raiseHeartBeatEvent(type: string) {
+  raiseHeartBeatEvent(type: string, extraValues?) {
     if (type === 'REPLAY') {
       this.interceptionResponses = {};
       this.showScore = false;
@@ -212,7 +233,8 @@ export class ViewerService {
       ver: this.version,
       edata: {
         type,
-        currentPage: 'videostage'
+        currentPage: 'videostage',
+        extra: extraValues
       },
       metaData: this.metaData
     };
@@ -221,10 +243,11 @@ export class ViewerService {
     const interactItems = ['PLAY', 'PAUSE', 'EXIT', 'VOLUME_CHANGE', 'DRAG',
       'RATE_CHANGE', 'CLOSE_DOWNLOAD', 'DOWNLOAD', 'NAVIGATE_TO_PAGE',
       'NEXT', 'OPEN_MENU', 'PREVIOUS', 'CLOSE_MENU', 'DOWNLOAD_MENU', 'DOWNLOAD_POPUP_CLOSE', 'DOWNLOAD_POPUP_CANCEL',
-     'SHARE', 'REPLAY', 'FORWARD', 'BACKWARD', 'FULLSCREEN' , 'NEXT_CONTENT_PLAY',
+      'SHARE', 'REPLAY', 'FORWARD', 'BACKWARD', 'FULLSCREEN', 'NEXT_CONTENT_PLAY', 'TRANSCRIPT_LANGUAGE_OFF',
+      'TRANSCRIPT_LANGUAGE_SELECTED'
     ];
     if (interactItems.includes(type)) {
-      this.videoPlayerService.interact(type.toLowerCase(), 'videostage');
+      this.videoPlayerService.interact(type.toLowerCase(), 'videostage', extraValues);
     }
 
   }

@@ -69,7 +69,7 @@ export class SunbirdVideoPlayerComponent implements OnInit, AfterViewInit, OnDes
         let code = errorCode.contentLoadFails,
           message = errorMessage.contentLoadFails;
         if (this.viewerService.isAvailableLocally) {
-            code = errorCode.contentLoadFails,
+            code = errorCode.contentLoadFails;
             message = errorMessage.contentLoadFails;
         }
         if (code === errorCode.contentLoadFails) {
@@ -113,8 +113,8 @@ export class SunbirdVideoPlayerComponent implements OnInit, AfterViewInit, OnDes
     this.nextContent = this.playerConfig.config?.nextContent;
     this.traceId = this.playerConfig.config['traceId'];
     this.sideMenuConfig = { ...this.sideMenuConfig, ...this.playerConfig.config.sideMenu };
-    this.viewerService.initialize(this.playerConfig);
     this.videoPlayerService.initialize(this.playerConfig);
+    this.viewerService.initialize(this.playerConfig);
     window.addEventListener('offline', this.raiseInternetDisconnectionError , true);
     this.QumlPlayerConfig.config = this.playerConfig.config;
     this.QumlPlayerConfig.config.sideMenu.enable = false;
@@ -207,13 +207,16 @@ export class SunbirdVideoPlayerComponent implements OnInit, AfterViewInit, OnDes
 
   qumlPlayerEvents(event) {
     if (event.eid === 'QUML_SUMMARY') {
+      this.showQumlPlayer = false;
       const score = parseInt(event.edata.extra.find(p => p.id === 'score')['value'], 10);
       this.viewerService.interceptionResponses[this.currentInterceptionTime] = {
         score,
         isSkipped: false
       };
-      document.querySelector(`[data-marker-time="${this.currentInterceptionTime}"]`)['style'].backgroundColor = 'green';
-      this.showQumlPlayer = false;
+      const interceptPointElement = document.querySelector(`[data-marker-time="${this.currentInterceptionTime}"]`);
+      if (interceptPointElement) {
+        interceptPointElement['style'].background = 'green';
+      }
       this.videoInstance.play();
       this.videoInstance.controls(true);
       if (!document.fullscreenElement && this.isFullScreen) {

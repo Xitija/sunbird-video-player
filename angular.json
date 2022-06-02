@@ -236,7 +236,8 @@
               "node_modules/video.js/dist/video.js",
               "dist/sunbird-video-player/lib/assets/videojs-markers.js",
               "node_modules/videojs-contrib-quality-levels/dist/videojs-contrib-quality-levels.min.js",
-              "node_modules/videojs-http-source-selector/dist/videojs-http-source-selector.min.js"
+              "node_modules/videojs-http-source-selector/dist/videojs-http-source-selector.min.js",
+              "dist/sunbird-video-player/lib/assets/videojs-transcript-click.min.js" 
             ]
           },
           "configurations": {

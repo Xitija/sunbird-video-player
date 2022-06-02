@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { AfterViewInit, Component, ElementRef, EventEmitter, Input, OnDestroy, Output, OnChanges, SimpleChanges,
-   Renderer2, ViewChild, ViewEncapsulation } from '@angular/core';
+   Renderer2, ViewChild, ViewEncapsulation, OnInit } from '@angular/core';
 import { QuestionCursor } from '@project-sunbird/sunbird-quml-player-v9';
 import * as _ from 'lodash-es';
 import 'videojs-contrib-quality-levels';
@@ -13,11 +13,12 @@ import { ViewerService } from '../../services/viewer.service';
   styleUrls: ['./video-player.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class VideoPlayerComponent implements AfterViewInit, OnDestroy, OnChanges {
+export class VideoPlayerComponent implements AfterViewInit, OnDestroy, OnChanges, OnInit {
   @Input() config: any;
   @Input() action: string;
   @Output() questionSetData = new EventEmitter();
   @Output() playerInstance = new EventEmitter();
+  transcripts = [];
   showBackwardButton = false;
   showForwardButton = false;
   showPlayButton = true;
@@ -42,7 +43,9 @@ export class VideoPlayerComponent implements AfterViewInit, OnDestroy, OnChanges
 
   constructor(public viewerService: ViewerService, private renderer2: Renderer2,
               public questionCursor: QuestionCursor, private http: HttpClient ) { }
-
+  ngOnInit() {
+    this.transcripts = this.viewerService.transcripts;
+  }
   ngAfterViewInit() {
     this.viewerService.getPlayerOptions().then(async (options) => {
       this.player = await videojs(this.target.nativeElement, {
@@ -54,7 +57,7 @@ export class VideoPlayerComponent implements AfterViewInit, OnDestroy, OnChanges
         playbackRates: [0.5, 1, 1.5, 2],
         controlBar: {
           children: ['playToggle', 'volumePanel', 'durationDisplay',
-            'progressControl', 'remainingTimeDisplay',
+            'progressControl', 'remainingTimeDisplay', 'CaptionsButton',
             'playbackRateMenuButton', 'fullscreenToggle']
         },
         plugins: {
@@ -154,6 +157,12 @@ export class VideoPlayerComponent implements AfterViewInit, OnDestroy, OnChanges
 
   onLoadMetadata(e) {
     this.totalDuration = this.viewerService.metaData.totalDuration = this.player.duration();
+    if (this.transcripts && this.transcripts.length && this.player.transcript) {
+      this.player.transcript({
+        showTitle: true,
+        showTrackSelector: true,
+      });
+    }
   }
 
   registerEvents() {
@@ -208,13 +217,57 @@ export class VideoPlayerComponent implements AfterViewInit, OnDestroy, OnChanges
         this.viewerService.playerEvent.emit({ type: 'ended' });
       }
     });
+    this.player.on('subtitleChanged', (event, track) => {
+      this.handleEventsForTranscripts(track);
+    });
     events.forEach(event => {
       this.player.on(event, (data) => {
         this.handleVideoControls(data);
         this.viewerService.playerEvent.emit(data);
       });
     });
-
+    this.trackTranscriptEvent();
+  }
+  trackTranscriptEvent() {
+    let timeout;
+    const player = this.player;
+    this.player.textTracks().on('change', function action(event) {
+      clearTimeout(timeout);
+      let transcriptObject = {};
+      this.tracks_.filter((track) => {
+        if ((track.kind === 'captions' || track.kind === 'subtitles') && track.mode === 'showing') {
+          transcriptObject = { artifactUrl: track.src, languageCode: track.language };
+          return true;
+        }
+      });
+      timeout = setTimeout(() => {
+        player.trigger('subtitleChanged', transcriptObject);
+      }, 10);
+    });
+  }
+  handleEventsForTranscripts(track) {
+    let telemetryObject;
+    if (!_.isEmpty(track)) {
+      telemetryObject = {
+        type: 'TRANSCRIPT_LANGUAGE_SELECTED',
+        extraValues: {
+          transcript: {
+            language: _.get(_.filter(this.transcripts, { artifactUrl: track.artifactUrl, languageCode: track.languageCode })[0], 'language')
+          },
+          videoTimeStamp: this.player.currentTime()
+        }
+      };
+      this.viewerService.metaData.transcripts.push(track.languageCode);
+    } else {
+      telemetryObject = {
+        type: 'TRANSCRIPT_LANGUAGE_OFF',
+        extraValues: {
+          videoTimeStamp: this.player.currentTime()
+        }
+      };
+      this.viewerService.metaData.transcripts.push('off');
+    }
+    this.viewerService.raiseHeartBeatEvent(telemetryObject.type, telemetryObject.extraValues);
   }
 
   toggleForwardRewindButton() {

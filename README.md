@@ -59,7 +59,12 @@ For existing apps, follow these steps to begin using .
 				    "glob": "**/*.*",
 				    "input": "./node_modules/@project-sunbird/sunbird-video-player-v9/lib/assets/",
 				    "output": "/assets/"
-			    }
+			    },
+          {
+                "glob": "**/*",
+                "input": "node_modules/@project-sunbird/sunbird-quml-player-v9/lib/assets/",
+                "output": "/assets/"
+          }
 		    
 		    ],
     

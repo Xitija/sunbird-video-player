@@ -69,3 +69,10 @@ export interface PlayerConfig {
     metadata: any; // content
     data?: any; // body
 }
+export interface Transcript {
+    language: string;
+    identifier: string;
+    artifactUrl: string;
+    languageCode: string;
+  }
+export interface Transcripts extends Array <Transcript> {}

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from './api.service';
+import { ApiService } from './services/api.service';
 import { samplePlayerConfig } from './data';
-
+import { PlayerConfig } from '@project-sunbird/sunbird-video-player-v9';
 export interface EcarManifest {
   id: string;
   ver: string;

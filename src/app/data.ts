@@ -6,14 +6,8 @@ export const samplePlayerConfig = {
     did: '3c0a3724311fe944dec5df559cc4e006',
     uid: 'anonymous',
     channel: '505c7c48ac6dc1edc9b08f21db5a571d',
-    pdata: {
-      id: 'prod.diksha.portal',
-      ver: '3.2.12',
-      pid: 'sunbird-portal.contentplayer'
-    },
-    contextRollup: {
-      l1: '505c7c48ac6dc1edc9b08f21db5a571d'
-    },
+    pdata: { id: 'prod.diksha.portal', ver: '3.2.12', pid: 'sunbird-portal.contentplayer' },
+    contextRollup: { l1: '505c7c48ac6dc1edc9b08f21db5a571d' },
     tags: [
       ''
     ],
@@ -23,8 +17,8 @@ export const samplePlayerConfig = {
     host: '',
     endpoint: '',
     userData: {
-      firstName: 'Sourav',
-      lastName: 'Dey'
+      firstName: 'Harish Kumar',
+      lastName: 'Gangula'
     }
   },
   config: {
@@ -36,47 +30,92 @@ export const samplePlayerConfig = {
       showExit: true
     }
   },
+  // tslint:disable-next-line:max-line-length
   metadata: {
-    // tslint:disable-next-line:max-line-length
-    interceptionPoints: '{\'items\':[{\'type\':\'QuestionSet\',\'interceptionPoint\':50,\'identifier\':\'do_213272808198291456121\'},{\'type\':\'QuestionSet\',\'interceptionPoint\':90,\'identifier\':\'do_213272808198291456121\'},{\'type\':\'QuestionSet\',\'interceptionPoint\':120,\'identifier\':\'do_213272808198291456121\'}]}',
-    interceptionType: 'Timestamp',
-    compatibilityLevel: 2,
-    subject: ['CPD'],
-    channel: '0125196274181898243',
-    language: ['English'],
+    copyright: 'Kendriya_Vidyalaya,2020',
+    keywords: [
+      'mp4'
+    ],
+    subject: [
+      'Hindi'
+    ],
+    channel: 'diksha',
+    language: [
+      'English'
+    ],
     mimeType: 'video/mp4',
     objectType: 'Content',
-    gradeLevel: ['Others'],
-    // tslint:disable-next-line:max-line-length
-    appIcon: 'https://ntpproductionall.blob.core.windows.net/ntp-content-production/content/do_31309320735055872011111/artifact/nishtha_icon.thumb.jpg',
+    gradeLevel: [
+      'Class 10'
+    ],
+    // tslint:disable-next-line
+    appIcon: 'https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/content/do_21310353608830976014671/artifact/content.thumb.jpg',
     primaryCategory: 'Explanation Content',
-    // tslint:disable-next-line:max-line-length
-    artifactUrl: 'https://ntpproductionall.blob.core.windows.net/ntp-content-production/content/assets/do_31309320735055872011111/engagement-with-language-.mp4',
+    // tslint:disable-next-line
+    artifactUrl: 'https://sunbirdstagingpublic.blob.core.windows.net/sunbird-content-staging/content/do_21310353608830976014671/artifact/mp4_14.mp4',
     contentType: 'ExplanationResource',
-    identifier: 'do_31309320735055872011111',
-    audience: ['Student'],
+    identifier: 'do_21310353608830976014671',
+    audience: [
+      'Student'
+    ],
     visibility: 'Default',
     mediaType: 'content',
     osId: 'org.ekstep.quiz.app',
-    languageCode: ['en'],
-    license: 'CC BY-SA 4.0',
-    name: 'Engagement with Language',
+    languageCode: [
+      'en'
+    ],
+    license: 'CC BY 4.0',
+    name: 'mp4_14.mp4',
+    interceptionType: 'Timestamp',
+    attributions: [
+      'kanmani'
+    ],
     status: 'Live',
-    code: '1c5bd8da-ad50-44ad-8b07-9c18ec06ce29',
-    // tslint:disable-next-line:max-line-length
+    code: '2a38c802-a986-cba4-3e74-f666b7983b01',
+    interceptionPoints: {
+      items: [
+        {
+          type: 'QuestionSet',
+          interceptionPoint: 50,
+          identifier: 'do_213487261245874176191'
+        },
+        {
+          type: 'QuestionSet',
+          interceptionPoint: 120,
+          identifier: 'do_213272808198291456121'
+        },
+        {
+          type: 'QuestionSet',
+          interceptionPoint: 80,
+          identifier: 'do_213471560301830144119'
+        }
+      ]
+    },
+    description: 'mp4',
+    // tslint:disable-next-line
     streamingUrl: 'https://ntppreprodmedia-inct.streaming.media.azure.net/409780ae-3fc2-4879-85f7-f1affcce55fa/mp4_14.ism/manifest(format=m3u8-aapl-v3)',
-    medium: ['English'],
-    createdOn: '2020-08-24T17:58:32.911+0000',
-    copyrightYear: 2020,
-    lastUpdatedOn: '2020-08-25T04:36:47.587+0000',
-    pkgVersion: 1,
-    versionKey: '1598330207587',
-    createdBy: '68dc1f8e-922b-4fcd-b663-593573c75f22',
+    medium: [
+      'English'
+    ],
+    createdOn: '2020-09-08T08:12:25.155+0000',
+    lastUpdatedOn: '2021-07-13T05:32:48.505+0000',
+    originData: {
+      identifier: 'do_21310017032908800011930',
+      repository: 'https://dock.preprod.ntp.net.in/api/content/v1/read/do_21310017032908800011930'
+    },
+    creator: 'kanmani1',
+    pkgVersion: 2,
+    versionKey: '1626154368569',
+    framework: 'ekstep_ncert_k-12',
+    createdBy: '95f436bd-aad2-498c-b982-c941ef44a06c',
+    board: 'CBSE',
     resourceType: 'Learn',
+    orgDetails: {},
     licenseDetails: {
-      name: 'CC BY-SA 4.0',
-      url: 'https://creativecommons.org/licenses/by-sa/4.0/legalcode',
+      name: 'CC BY 4.0',
+      url: 'https://creativecommons.org/licenses/by/4.0/legalcode',
       description: 'For details see below:'
     }
-  }
+  },
+  data: {}
 };

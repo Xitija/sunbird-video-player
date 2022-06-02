@@ -1,4 +1,6 @@
-<video #target class="video-js" controls (loadeddata)="onLoadMetadata($event)"></video>
+<video #target class="video-js" controls crossorigin="anonymous" (loadeddata)="onLoadMetadata($event)">
+  <track *ngFor="let trans of transcripts" default="{{trans.default}}" kind="captions" src="{{trans.artifactUrl}}" srclang="{{trans.languageCode}}" label="{{trans.language}}" >
+</video>
 <div #controlDiv>
   <div [ngClass]="{'player-for-back-ward-controls': currentPlayerState === 'pause' || showControls }">
     <div class="player-container" *ngIf="currentPlayerState === 'pause' || showControls">

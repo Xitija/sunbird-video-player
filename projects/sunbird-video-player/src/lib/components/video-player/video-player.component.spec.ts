@@ -6,6 +6,7 @@ import { ViewerService } from '../../services/viewer.service';
 import { SunbirdVideoPlayerService } from '../../sunbird-video-player.service';
 import { QuestionCursor } from '@project-sunbird/sunbird-quml-player-v9';
 import { QuestionCursorImplementationService } from 'src/app/question-cursor-implementation.service';
+import {mockData} from './video-player.component.data';
 describe('VideoPlayerComponent', () => {
   let component: VideoPlayerComponent;
   let fixture: ComponentFixture<VideoPlayerComponent>;
@@ -189,6 +190,7 @@ describe('VideoPlayerComponent', () => {
       on: jasmine.createSpy('on')
     };
     spyOn(component.viewerService, 'raiseHeartBeatEvent').and.callFake(() => 'true');
+    spyOn(component, 'trackTranscriptEvent').and.callFake(() => 'true');
     component.registerEvents();
     expect(component.isAutoplayPrevented).toBeFalsy();
     expect(component.player.play).toHaveBeenCalled();
@@ -223,4 +225,44 @@ describe('VideoPlayerComponent', () => {
     expect(component.showForwardButton).toBeTruthy();
     expect(component.showBackwardButton).toBeFalsy();
   });
+  it('should call handleEventsForTranscripts for transcript language off', () => {
+   const telemetryObject = {
+      type: 'TRANSCRIPT_LANGUAGE_OFF',
+      extra: {
+        videoTimeStamp: 1.20
+      }
+    };
+   component.viewerService.metaData = { transcripts: ['en'] };
+   component.player = {
+      currentTime: jasmine.createSpy('currentTime').and.returnValue(1.20),
+    };
+   spyOn(component.viewerService, 'raiseHeartBeatEvent').and.callFake(() => 'true');
+   component.handleEventsForTranscripts({});
+   expect(component.player.currentTime).toHaveBeenCalled();
+   expect(component.viewerService.metaData.transcripts).toEqual(['en', 'off']);
+   expect(component.viewerService.raiseHeartBeatEvent).toHaveBeenCalledWith(telemetryObject.type, telemetryObject.extra);
+  });
+  it('should call handleEventsForTranscripts for transcript language selected', () => {
+    component.transcripts = mockData.transcripts;
+    const telemetryObject = {
+       type: 'TRANSCRIPT_LANGUAGE_SELECTED',
+       extra: {
+         videoTimeStamp: 2.230,
+         transcript: {
+          language: 'Bengali'
+        },
+       }
+     };
+    component.viewerService.metaData = { transcripts: ['en'] };
+    component.player = {
+       currentTime: jasmine.createSpy('currentTime').and.returnValue(2.230),
+     };
+    const track =  { artifactUrl: 'https://cdn.jsdelivr.net/gh/tombyrer/videojs-transcript-click@1.0/demo/captions.sv.vtt',
+      languageCode: 'bn' };
+    spyOn(component.viewerService, 'raiseHeartBeatEvent').and.callFake(() => 'true');
+    component.handleEventsForTranscripts(track);
+    expect(component.player.currentTime).toHaveBeenCalled();
+    expect(component.viewerService.metaData.transcripts).toEqual(['en', 'bn']);
+    expect(component.viewerService.raiseHeartBeatEvent).toHaveBeenCalledWith(telemetryObject.type, telemetryObject.extra);
+   });
 });
