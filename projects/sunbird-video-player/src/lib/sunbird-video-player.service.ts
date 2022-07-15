@@ -13,6 +13,7 @@ export class SunbirdVideoPlayerService {
   private telemetryObject: any;
   private context;
   public config;
+  public interceptionPointsData;
 
   constructor(private utilService: UtilService) {
     this.contentSessionId = this.utilService.uniqueId();
@@ -21,6 +22,7 @@ export class SunbirdVideoPlayerService {
   public initialize({ context, config, metadata }: PlayerConfig) {
     this.context = context;
     this.config = config;
+    this.interceptionPointsData = metadata.interceptionPoints?.items;
     this.playSessionId = this.utilService.uniqueId();
 
     if (!CsTelemetryModule.instance.isInitialised) {
@@ -135,6 +137,17 @@ export class SunbirdVideoPlayerService {
   }
 
   private getEventOptions() {
+    const correlationData = [
+      { id: this.contentSessionId, type: 'ContentSession' },
+      { id: this.playSessionId, type: 'PlaySession' },
+      { id: '2.0' , type: 'PlayerVersion'}];
+
+    if (this.interceptionPointsData) {
+      this.interceptionPointsData.forEach((element) => {
+        correlationData.push({ id: element.identifier, type: element.type });
+      });
+    }
+
     return ({
       object: this.telemetryObject,
       context: {
@@ -143,9 +156,7 @@ export class SunbirdVideoPlayerService {
         env: 'contentplayer',
         sid: this.context.sid,
         uid: this.context.uid,
-        cdata: [{ id: this.contentSessionId, type: 'ContentSession' },
-        { id: this.playSessionId, type: 'PlaySession' },
-        {id: '2.0' , type: 'PlayerVersion'}],
+        cdata: correlationData,
         rollup: this.context.contextRollup || {}
       }
     });
