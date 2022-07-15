@@ -299,7 +299,6 @@ export class VideoPlayerComponent implements AfterViewInit, OnInit, OnDestroy, O
     this.showPauseButton = true;
     this.showPlayButton = false;
     this.toggleForwardRewindButton();
-    this.viewerService.raiseHeartBeatEvent('PLAY');
   }
 
   pause() {
