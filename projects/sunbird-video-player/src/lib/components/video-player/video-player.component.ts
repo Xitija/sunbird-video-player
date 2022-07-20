@@ -230,8 +230,11 @@ export class VideoPlayerComponent implements AfterViewInit, OnInit, OnDestroy, O
     });
     events.forEach(event => {
       this.player.on(event, (data) => {
+        if (this.totalDuration === 0 && data.type === 'durationchange') {
+          this.totalDuration = this.viewerService.metaData.totalDuration = this.player.duration();
+        }
         this.handleVideoControls(data);
-        this.viewerService.playerEvent.emit(data);
+        this.viewerService.playerEvent.emit({ ...data, metaData: this.viewerService.metaData });
       });
     });
     this.trackTranscriptEvent();
