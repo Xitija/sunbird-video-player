@@ -245,12 +245,15 @@ export class ViewerService {
       'RATE_CHANGE', 'CLOSE_DOWNLOAD', 'DOWNLOAD', 'NAVIGATE_TO_PAGE',
       'NEXT', 'OPEN_MENU', 'PREVIOUS', 'CLOSE_MENU', 'DOWNLOAD_MENU', 'DOWNLOAD_POPUP_CLOSE', 'DOWNLOAD_POPUP_CANCEL',
       'SHARE', 'REPLAY', 'FORWARD', 'BACKWARD', 'FULLSCREEN', 'NEXT_CONTENT_PLAY', 'TRANSCRIPT_LANGUAGE_OFF',
-      'TRANSCRIPT_LANGUAGE_SELECTED'
+      'TRANSCRIPT_LANGUAGE_SELECTED', 'VIDEO_MARKER_SELECTED'
     ];
     if (interactItems.includes(type)) {
       this.videoPlayerService.interact(type.toLowerCase(), 'videostage', extraValues);
     }
+  }
 
+  raiseImpressionEvent(pageId: string, cdata: any = {}) {
+    this.videoPlayerService.impression(pageId, cdata);
   }
 
   // tslint:disable-next-line:no-shadowed-variable

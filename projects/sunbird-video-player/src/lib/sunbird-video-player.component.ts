@@ -214,8 +214,6 @@ export class SunbirdVideoPlayerComponent implements OnInit, AfterViewInit, OnDes
     this.viewerService.raiseHeartBeatEvent('DOWNLOAD');
   }
 
-
-
   qumlPlayerEvents(event) {
     if (event.eid === 'QUML_SUMMARY') {
       this.showQumlPlayer = false;
@@ -230,6 +228,7 @@ export class SunbirdVideoPlayerComponent implements OnInit, AfterViewInit, OnDes
       }
       this.videoInstance.play();
       this.videoInstance.controls(true);
+      this.viewerService.raiseImpressionEvent('video');
       // if currently video is not in full screen and was previously full screen then set it back to full screen again
       if (!document.fullscreenElement && this.isFullScreen) {
         if (document.getElementsByClassName('video-js')[0]) {
@@ -239,7 +238,6 @@ export class SunbirdVideoPlayerComponent implements OnInit, AfterViewInit, OnDes
       }
     }
   }
-
 
   questionSetData({response, time, identifier}) {
     this.QumlPlayerConfig.metadata = response;
@@ -255,6 +253,12 @@ export class SunbirdVideoPlayerComponent implements OnInit, AfterViewInit, OnDes
       this.isFullScreen = false;
     }
     this.showQumlPlayer = true;
+    this.viewerService.raiseImpressionEvent('interactive-question-set', { id: identifier, type: 'QuestionSet' });
+    this.viewerService.raiseHeartBeatEvent('VIDEO_MARKER_SELECTED', {
+      identifier, // Question set id,
+      type: 'QuestionSet', // Type of interaction
+      interceptedAt: time // Time when the interception happened
+    });
   }
 
   playerInstance(event) {
